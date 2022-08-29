@@ -24,7 +24,7 @@ import { apiUpoad } from '../api';
         methods: {
             async upload() {
                 const self = this
-                const res = await apiUpoad(this.file,{
+                return apiUpoad(this.file,{
                     onUploadProgress(e){
                          self.percent = Math.floor((e.loaded/e.total)*100)
                     }
